@@ -1,0 +1,29 @@
+{
+  "scripts": {
+    "test": "mocha"
+  },
+  "name": "abc",
+  "description": "ABC Tests",
+  "version": "1.0.0",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mohitkumarsompura/abc.git"
+  },
+  "author": "Mohit Kumar Sompura",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mohitkumarsompura/abc/issues"
+  },
+  "homepage": "https://github.com/mohitkumarsompura/abc#readme",
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "chai-http": "^3.0.0",
+    "mocha": "^3.2.0",
+    "request": "^2.81.0",
+    "should": "^11.2.1"
+  }
+}
