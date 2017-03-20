@@ -1,13 +1,15 @@
+//Begin by including the things we need to run the tests
 var chai = require('chai');
 var chaiHttp = require('chai-http');
 var should = chai.should();
 chai.use(chaiHttp);
-var testPropsFile = './testproperties'; // The main input source
+var testPropsFile = './testproperties'; // The main test input source
 var testProps = require(testPropsFile);
 
+//We'll run a set of tests against a set of APIs against a given env
 describe('ABC Tests', function() {
   describe('ABC Rest API Test Suite', function() {
-    var envs = testProps.hosts;
+    var envs = testProps.hosts; //These may be production or staging or other test env 
     var testsdata = testProps.testsdata;
     envs.forEach(function(env) {
         testsdata.forEach(function(testdata) {
@@ -28,6 +30,7 @@ describe('ABC Tests', function() {
 });
 
 function validateJson(json,testdata) {
+	//Validate the json received from the API against our reference
     json.should.have.a.property("entity");
     json.entity.should.equal(testdata.expected.entity);
     json.should.have.a.property("arid");
