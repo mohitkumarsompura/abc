@@ -14,6 +14,7 @@ describe('ABC Tests', function() {
     envs.forEach(function(env) {
         testsdata.forEach(function(testdata) {
             it('Validate the REST API response for ' + testdata.inputdata.program.name, function(done) {
+                this.timeout(10000);
                 console.log("Env : " + env.value);
                 chai.request("http://" + env.value + testdata.inputdata.path)
                     .get(testdata.inputdata.program.value)
