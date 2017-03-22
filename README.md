@@ -11,6 +11,7 @@ cd test
 #make sure you have all dependencies specified in package.json in this folder
 
 ##To Run REST API test
+
 npm test
 
 ###To run UI Test
